@@ -30,4 +30,25 @@ Hieriachically, Switch has lower position than Router.
 Router manages network and outer-network, Switch manages communication into networks.
 Router connected with WAN(광역네트워크), Switch connected with LAN
 
+Subnetting : splitting up the number of hosts that can fit within the network - represented by a subnet mask.
+IP address composed with 3 parts - Network address / Host address/ Dafault gateway. 
+Network address : purposing address
+Host address : host's network address
+Default gateway : special address assigned to a device on network
+
+ARP - Address Resolution Protocol 
+receives network address and returns MAC address - if there's no network address in cache, it broadcasts network address(called ARP request) 
+and a device that has corresponding MAC address unicasts ARP (called ARP reply). so device can know next hop address ; next hop's MAC address.
+
+DHCP - Dynamic Host Configuration Protocol
+If a device newly connected in a network, a device sends message (DHCP Discover)- requesting IP address.
+DHCP server got that message and assign IP address to the device.(DHCP offer)
+and the device got the IP address and sends message to DHCP server which means starting using asigned IP address.(DHCP request)
+then DHCP server acknowledges message and set the IP address's valid time.(DHCP ACK)
+
+
+
+
+
+
 

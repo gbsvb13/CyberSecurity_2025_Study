@@ -46,9 +46,41 @@ DHCP server got that message and assign IP address to the device.(DHCP offer)
 and the device got the IP address and sends message to DHCP server which means starting using asigned IP address.(DHCP request)
 then DHCP server acknowledges message and set the IP address's valid time.(DHCP ACK)
 
+20250126
+private IP addresses : 
+10.~.~.~ (10.0.0.0 ~ 10.255.255.255)
+127.16.0.0 ~ 127.31.255.255
+192.168.0.0 ~ 192.168.255.255
 
+TELNET
+The TELNET (Teletype Network) protocol is a network protocol for remote terminal connection. It allows you to connect to and communicate with a remote system and issue text commands.
+Although initially it was used for remote administration, I can use telnet to connect to any server listening on a TCP port number.
 
+How to use telnet in terminal : telnet (IP address) (port), CTRL + ] when want to stop
+Echo server : port 7
+Daytime server : port 13
+Web(HTTP) server : port 80
 
+Echo server just replying what I typed in
+Daytime server immediatly expires after echoing daytime
+Web server : Can get informations by typing some keywords
+ex) [GET/ HTTP/1.1] -> GET : requiring resources from server, / : requiring server's root directory , HTTP/1.1 : The version of HTTP protocol
+--> Meaning "By using HTTP 1.1 protocol, get the root dirctory from server."
+[Host : www.example.com] : "I'm requiring to a host which named www.example.com" 
+
+DHCP : Dynamic Host Configuration Protocol
+Application layer, relies on UDP.
+Server's port is 67 in UDP, Host is 68
+Smartphones and laptops are configured to use DHCP by default
+
+DHCP's four steps : DORA - Discover, Offer, Request, Acknowledge
+From 0.0.0.0 (host, only has MAC address) Broadcast (255.255.255.255) -> DHCP server's offer -> Host's offered IP address request -> DHCP server's acknowledgement 
+
+ARP uses hexadecimal, so ARP broadcasting's address is ff:ff:ff:ff:ff:ff.
+
+--> Every broadcasting's address is its full address(all the decimal/hexadecimal's numbers are 1)
+
+ICMP Type 8 : echo request
 
 
 

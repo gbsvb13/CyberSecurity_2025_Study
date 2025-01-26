@@ -79,8 +79,19 @@ From 0.0.0.0 (host, only has MAC address) Broadcast (255.255.255.255) -> DHCP se
 ARP uses hexadecimal, so ARP broadcasting's address is ff:ff:ff:ff:ff:ff.
 
 --> Every broadcasting's address is its full address(all the decimal/hexadecimal's numbers are 1)
-
 ICMP Type 8 : echo request
+
+NAT : Network Address Translation
+Making many private IP address by using one public IP address.
+In internal network, 192.168.0.129 / 15401(port) but in external network it looks like 212.3.4.5 / 19273. 
+Its because router's address is 212.3.4.5 and connected devices are differ only by its port number.
+ex) A laptop above's internal network adress is 192.168.0.129 and suppose desktop is 192.168.0.125. 
+But from external network's view, the laptop's adresss is 212.3.4.5/19273, the desktop's address is 212.3.4.5/32759. 
+
+TCP connection can maintain 65536 connctions at once(theoretically)
+
+
+
 
 
 

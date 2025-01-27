@@ -90,6 +90,17 @@ But from external network's view, the laptop's adresss is 212.3.4.5/19273, the d
 
 TCP connection can maintain 65536 connctions at once(theoretically)
 
+20250127
+DNS records
+DNS traffic uses UDP port 53 by default and TCP port 53 as a default fallback
+There are so many DNS records doing but learn about four
+A record : maps a hostname to one or more IPv4 addresses. ex)example.com -> 172.17.2.172
+AAAA record : similar to the A record but for the IPv6
+*AA and AAA are exists, AAA refers to Authentification, Authorization, Accounting.
+CNAME record : CNAME (Canoncial Name) record, maps a domain name to another domain name. ex) www.example.com -> example.com or example.org
+MX record : MX(Mail Exchange) record specifies the mail server responsible for handling emails for a domain
+
+For look up the IP address, use tool named nslookup. [nslookup example.com]
 
 
 

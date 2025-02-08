@@ -158,6 +158,49 @@ A cryptographic protocol opertating at the OSI model's transport layer
 Secure communication between server and client even on a insecure network
 Ensures no one can read or modify the exchanged data
 
+Difference between HTTPS and HTTP
+HTTP's will require two steps - 
+1.establish a TCP three-way handshake with the target server
+2. Communicate using the HTTP protocol; ex)GET / HTTP/1.1
+
+HTTPS: Establishing a TLS session between step 1 and 2 above
+When check the packets with WireShark, HTTPS's some packets are transfered(not on HTTP) 'Application data', so attacker cannot recognize what those packets means
+And the stream of packets looks gibberish(헛소리,알아들을 수 없음). No way to know the contents without encryption key.
+
+SMTP/POP3/IMAP is no difference than adding TLS to HTTP. 
+When TSL applied, each port numbers changed
+HTTPS : 443
+SMTPS : 465 / 587
+POP3S : 995
+IMAPS : 993
+
+SSH
+Telnet doesn't have own security system.
+SSH : Telnet's secured version. All data encrypted.
+Default port : 22
+[ssh username@hostname] to connect to SSH server. In case username is same with logged-in username, [ssh hostname]
+In kali linux, The argument -X is is required to support running graphical interfaces. ex)[ssh 192.168.124.148 -X]
+
+SFTP
+Means SSH File Transfer Protocol and allows secure file transfer.
+shares the same port number; 22
+can connect by using command [sftp username@hostname]. 
+after connection, user can issue commands such as get filename and put filename to download/upload files.
+SFTP commands are UNIX-like, not a FTP
+SFTP is not same with FTPS
+
+VPN : Virtual Private Network
+If user uses VPN, No one can see user's public IP address but the VPN server's.
+VPN also allows user's remote access to main branch(geographically far)
+
+By using wireshark, if user know ssl-key.log, then TLS decryption enabled.
+then user*attacker can check ID and password.
+
+
+
+
+
+
 
 
 

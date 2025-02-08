@@ -102,6 +102,65 @@ MX record : MX(Mail Exchange) record specifies the mail server responsible for h
 
 For look up the IP address, use tool named nslookup. [nslookup example.com]
 
+20250208
+Using WireShark, Red word is the text sent by user browser and blue texts are the web server processes.
+HTTP is designed to retrieve web pages
+FTP(File Transfer Protocol) is designed to transfer files. so FTP is efficient for file transfer
+
+If user want to work FTP:
+[ftp (ip address) 21] at terminal
+Name : anonymous
+no password needed
+ls : works same with another commands
+type ascii: switches to ascii mode as this is a text file
+get ~~~.txt : allows user to retreive(검색) the file user wants
+When look with Wireshark, ls transfered LIST command
+
+SMTP commands in telnet
+When sending email, User uses email protocol, named SMTP(Simple Mail Transfer Protocol).
+SMTP defines how user interact with mail server and how mail server interact with another.
+For SMTP using, Some commands are needed:
+Starting SMTP : telnet (ip AD) 25
+HELO or EHLO initiates an SMTP session -> [HELO client.thm]
+MAIL FROM specifies the sender’s email address -> [MAIL FROM: <user@client.thm>]
+RCPT TO specifies the recipient’s email address -> [RCPT TO : <strategos@server.thm>]
+DATA indicates that the client will begin sending the content of the email message -> [DATA]
+. is sent on a line by itself to indicate the end of the email message
+-> 
+[From: user@client.thm
+To: strategos@server.thm
+Subject: Telnet email
+
+Hello. I am using telnet to send you an email!
+.]
+
+POP3 - Post Office Protocol version 3
+designed to allow the client to interact with mail server and retrieve email messages
+Email client uses SMTP to send, uses POP3 to retrieve.
+Starting POP3 : telnet (ip AD) 110
+USER <username> identifies the user
+PASS <password> provides the user’s password
+STAT requests the number of messages and total size
+LIST lists all messages and their sizes
+RETR <message_number> retrieves the specified message
+DELE <message_number> marks a message for deletion
+QUIT ends the POP3 session applying changes, such as deletions
+
+IMAP: Used synchronizing mailbox across multiple devices
+allows read/move/delete messages
+port : 143
+--> telnet (ip AD) 143
+
+Networking Secure Protocol
+TLS : Added to existing protocols to protect communication confidentiality/integrity/authenticity.
+HTTP/POP3/SMTP/IMAP become HTTPS/POP3S/SMTPS/IMPAS when TLS applied.
+A cryptographic protocol opertating at the OSI model's transport layer
+Secure communication between server and client even on a insecure network
+Ensures no one can read or modify the exchanged data
+
+
+
+
 
 
 

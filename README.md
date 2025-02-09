@@ -196,6 +196,20 @@ VPN also allows user's remote access to main branch(geographically far)
 By using wireshark, if user know ssl-key.log, then TLS decryption enabled.
 then user*attacker can check ID and password.
 
+20250209
+-WireShark practice-
+WireShark: Analyser tool for sniffing and investigating live traffic and inspecting packet captures
+Detecting and troubleshooting network problems / Detecting security anomalies ex)abnormal port usage, suspicious traffic /investigating and learning protocol details
+Wireshark is not a intrusion detecting system(IDS). only allows to discover and investigate packets in depth
+
+-WireShark GUI-
+When loaded the file, located left-under: packet details, right-under: packet bytes.
+Blue shark fin button : start sniffing
+packet numbers are not only useful when count a total number of packets but also  in-frame packet tracking 
+with 'go' button on toolbar, user can track a packet conviniently.
+and 'edit' button on toolbar or ctrl + f, user can find desired contents in packets
+when finding packet, knowing input type and choosing the search field(packet list/packet details/packet bytes, 화면 상단/좌하단/우하단) is crucial.
+
 
 
 

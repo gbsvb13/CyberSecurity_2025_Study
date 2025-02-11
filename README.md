@@ -209,7 +209,10 @@ packet numbers are not only useful when count a total number of packets but also
 with 'go' button on toolbar, user can track a packet conviniently.
 and 'edit' button on toolbar or ctrl + f, user can find desired contents in packets
 when finding packet, knowing input type and choosing the search field(packet list/packet details/packet bytes, 화면 상단/좌하단/우하단) is crucial.
-
+By applying filter user can see same kind of packets. right click->apply as filter.
+and conversation filter makes user view only related packets.
+colouring filter is almost same with conversation filter but make them easier to detect by colouring them. the color cannot change.
+follow TCP/UDP stream : 'red text/blue text' above, following raw traffic streams
 
 
 

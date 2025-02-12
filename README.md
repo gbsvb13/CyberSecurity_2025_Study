@@ -217,7 +217,7 @@ follow TCP/UDP stream : 'red text/blue text' above, following raw traffic stream
 20250212
 TcpDump
 tcpdump's commands
--i : interfaces, Captures packets on a specific network interface [tcpdump -i interface]
+-i : interfaces, Captures packets on a specific network interface [tcpdump -i interface] *at this poing, interface means PC's network connection point
 -w : file, Writes captured packets to a file [tcpdump -w FILE]
 -r : read, Reads captured packets from a file [tcpdump -r FILE]
 -c : count Captures a specific number of packets [tcpdump -c FILE]
@@ -226,7 +226,45 @@ tcpdump's commands
 ex) tcpdump -i eth0 -c 50 -v
 eth0 프로토콜에서 50개의 패킷을 캡쳐한 후 자세한 정보(-v)를 출력하고 종료
 
+Nmap
+Since discovering other live devices,
+ping won't get any informaion if a firewall blocks ICMP traffic
+Arp-scan only works when devices are connceted same network
+So Nmap can become a solution.
+-How to scan-
+IP range using - : 192.168.0.1 ~ 192.168.0.10 : [192.168.0.1-10]
+IP subnet using / : [192.168.0.1/24] = [192.168.0.0-255]
+Using hostname : specify target with hostname. [example.thm]
 
+-Host scanning-
+-sn  = ping scan, scanning local network.
+ex) nmap -sn 192.168.66.0/24
+only notifies number of online / connected devices
+-sL : list scan, shows every detected IPs
+[nmap -sL 192.168.0.1/24]
+
+-Port scanning-
+Scanning TCP port
+The easiest way is attempt to telnet - telnet needs to establish a three-way handshake so it can easily detected
+-sT : connect scanning, trying to connect to the target TCP port.
+-sS : relatively stealth scanning, only tries first step of three-way handshaking; sends only TCP SYN packet.
+
+Scanning UDP port
+-sU : sending UDP packets to all target ports, detecting online ports by ICMP destination unreachable responses
+
+Limiting the target ports
+-F : Nmap's mode option, Fast mode. scans 100 most common ports(default 1000)
+-p[range] : only scans a range of ports to scan.
+ex) -p10-1024 : port 10 to 1024, -p-25 : port 1 to 25.
+
+Os detection
+By adding -O option, user can enable OS detection.
+ex) [nmap -sS -O (IP ad)]
+Service and Version Detection
+-sV enables version detection.
+an additional column 'VERSION' appears same interface with interface that used -O.
+ex) [nmap -sS -sV (IP ad)]
+-Pn : scan hosts including didn't reply
 
 
 

@@ -214,8 +214,17 @@ and conversation filter makes user view only related packets.
 colouring filter is almost same with conversation filter but make them easier to detect by colouring them. the color cannot change.
 follow TCP/UDP stream : 'red text/blue text' above, following raw traffic streams
 
-
-
+20250212
+TcpDump
+tcpdump's commands
+-i : interfaces, Captures packets on a specific network interface [tcpdump -i interface]
+-w : file, Writes captured packets to a file [tcpdump -w FILE]
+-r : read, Reads captured packets from a file [tcpdump -r FILE]
+-c : count Captures a specific number of packets [tcpdump -c FILE]
+-n : dont reslove IP addresses [tcpdump -n]
+-nn : don't resolve protocol numbers
+ex) tcpdump -i eth0 -c 50 -v
+eth0 프로토콜에서 50개의 패킷을 캡쳐한 후 자세한 정보(-v)를 출력하고 종료
 
 
 

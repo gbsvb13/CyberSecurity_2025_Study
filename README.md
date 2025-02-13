@@ -287,6 +287,48 @@ the SMB request from the victim to the client can be seen in a packet capture wi
 The most widely used exploitation framework.
 *Payload : the code that will run on the target system to get desired information
 
+Metasploit's components
+Auxiliary : supporting module- scanners, crawlers and fuzzers can be found
+Encoder : Allow an attacker to encode the exploit and payload in the hope that a signature-based antivirus solution may miss them.
+Evasion : evading antivirus softwares
+NOPs(No OPeration): do nothing. used as a buffer 
+Payloads: codes that will run on the target system. ex) malware, add to the penetration test report
+-Payloads's four directories
+Adapters : disguise a payload with other ordinary system file
+Singles : Self-contained payloads. don't need download an additional component to run
+Stagers / stages : Stages downloaded by Stagers. 
+
+Metasploit using - [msfconsole]
+msfconsole(Metasploit console) can be used just like a general command- line shell. supports most of linux commands.
+by typing 'use', user can change prompt. although prompt had changed it still supports most of linux commands.
+[show + payloads/options] : shows current prompt's selectable options.
+[back]: if want to quit using current prompt
+[search] : searching is also able in console.  This command will search the Metasploit Framework database for modules relevant to the given search parameter.
+provides an overview of each returned module.
+All parameters are set using the same command: [set PARAMETER_NAME VALUE]
+-prompts-
+Meterpreter:Metasploit's payload name
+A Meterpreter command, some of parameters require a value for the exploit to work.
+ex) RPORT(remote port-port on the target system that payload will try to connect) value is 80(http) but target web application could be using 8080(https)
+after set a parameter, [show options] command to check the value was set correctly.
+
+Often used parameters
+RHOSTS: Remote HOSTS, the IP ad of the target system. a single or a network range can be set. supports classless(CIDR) or network range
+RPORT: Remote Port, port of target system's vulnarable application is running on
+PAYLOAD : will activate your exploit
+LHOST: LocalHost, attacking machine's IP ad
+LPORT : Local Port, port that attacker will use for the reverse shell to connect back to, same with port of attacking machine's.
+SESSION : Each connection established to the target system using Metasploit will have a session ID.
+
+User can override any set parameter using the set command again with a different value and also clear any parameter value by using [unset] or clear all by [unset all]
+setg : sets a global value that don't erased even session cleared with [back] command.
+exploit command can be used without any parameters or using -z instead.
+[exploit -z] : starts exploit session
+
+
+
+
+
 
 
 

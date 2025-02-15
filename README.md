@@ -345,6 +345,20 @@ With db_nmap commend, nmap can used too. all results will be saved to the databa
 Vulnerability scanning
 use search command and info, knowing about modules and their usage can help vulnerability scanning.
 
+20250215
+-msfvenom-
+msfvenom allows to access all payloads available in the metasploit framework. it also allows to create payloads in may different formats/may different taget systems
+encoders just encoding payloads. by -e parameter, PHP version of Meterpreter encoded in Base64. 
+*encode : 데이터를 특정 형식으로 변형
+After encoding, in metasploit UI, showing eval(~~~). At this point, eval makes code(~~~) a executivable code.
+When execution occured the code decoded and works
+
+Metarpreter
+Metarpreter is a Metasploit payload that supports the penetration testing process with many valuable components
+Meterpreter will run on the target system and act as an agent within a command and control architecture
+Run in target system but not installed on, Runs in memory and does not write itself to the disk on the target.
+
+
 
 
 

@@ -357,9 +357,14 @@ Metarpreter
 Metarpreter is a Metasploit payload that supports the penetration testing process with many valuable components
 Meterpreter will run on the target system and act as an agent within a command and control architecture
 Run in target system but not installed on, Runs in memory and does not write itself to the disk on the target.
-
-
-
+-Metapreter's commands-
+[getpid] : gets machine's PID, PID is Precess ID - Each process's unique number
+[ps] : list all pids and ppid(parent precess id)
+Metapreter can loaded and started when exploit successfully completed. 
+Many ways to complete exploit and each ways need proper preperaions. 
+Using outer websites, hash can be tranlated to cleartext password *use hashdump and text's last texts are NTLM hash.
+[pwd] = WhereAmI.
+When changing directories, if blank included in path ex)"c\program files (x86)\targetFile\targetText" can be useful("" used)
 
 
 

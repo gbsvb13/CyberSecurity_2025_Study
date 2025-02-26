@@ -366,6 +366,21 @@ Using outer websites, hash can be tranlated to cleartext password *use hashdump 
 [pwd] = WhereAmI.
 When changing directories, if blank included in path ex)"c\program files (x86)\targetFile\targetText" can be useful("" used)
 
+20250224
+Sessions (sessionNumber) : convert to session number (when changed session)
+
+20250226
+Windows Fundamentals
+The Windows/system32 folder: Contains windows operting system
+holds the important files that are critical for the operationg system
+Windows folder's system variable : %windir%
+
+msconfig in search tab : system configuration. but using task manager recommended *taskmgr
+computer management : [compmgmt] in search tab - mgmt means management.
+system information : [msinfo32]
+resource monitor : [resmon]
+In cmd, [net] command is primarily used to manage network resources.
+Regestry editor : [regedt32.exe]
 
 
 

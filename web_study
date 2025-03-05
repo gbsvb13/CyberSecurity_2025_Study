@@ -1,2 +1,35 @@
 Web Studies
 
+20250304
+URL : Uniform Resource Locater.
+Composed with scheme / user / Host,domain / port / path / query string / fragment.
+ex)http://user:password@tryhackme.com/80/view-room?id=1#task3
+Scheme : protocol that used to access the website. HTTPS in common
+Query String : part of URL that starts with a question mark. it’s important to handle them securely to prevent attacks like injections
+
+HTTP and each versions
+http/1.1 : still widely used today
+http/2, /3 have better performance than http/1.1 but many systems still use HTTP/1.1 because it’s well-supported and works with most existing setups
+
+HTTP methods
+commands for http. used like [METHOD /path HTTP/version]
+GET : fetch data
+POST : Sends data to the server
+PUT : update or replace something on the server
+DELETE : Remove something from server
+etc. still some methods remaining but no need to memorize everything
+
+Request Headers
+Host / User-Agent / Referer / Cookie / Content-type
+Cookie : Information the web server previously asked the web browser is held in cookies.
+
+Request body's four types
+URL Encoded : Structed in pairs of key and multiple pairs are seperated by & symbol, ex)key1=value1&key2=value2
+Form Data : Allows multiple data blocks to be sent and they seperated by ---.
+  this tpye of data can be used to send binary data; uploading files or images to a web server.
+JSON : JabaScript Object Notation. Data is formatted in pairs of name:value.
+XML : Data is structured inside tags, like html. ex)<label>name</label>
+
+
+
+

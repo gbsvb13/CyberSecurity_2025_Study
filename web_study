@@ -30,6 +30,36 @@ Form Data : Allows multiple data blocks to be sent and they seperated by ---.
 JSON : JabaScript Object Notation. Data is formatted in pairs of name:value.
 XML : Data is structured inside tags, like html. ex)<label>name</label>
 
+20250305
+HTTP responses: Status Line and Status Codes
+Every first line of http responses called Status line.
+Status line consisted with HTTP version, Status code, Reason Phrase.
+In status line, Status code means short three-digit numbers that showing the outcome of request
+Reason Phrase is short message that explains the status code.
+
+Common status codes : 
+100 : continue(waiting additional response)
+200 : OK
+301 : Moved permanantly
+404 : Not found
+500 : Internal Server Error
+
+Response Header
+Key headers in response header : Content-type / Content=length / Date
+Content-type : what kind of content it's getting. like HTML,JSON. also includes character set (like UTF-8)
+
+Other Common Response Headers
+Set-cookie : sends cookies from the server to the client.
+To keep things secure, cookie must set with the HttpOnly / Secure flag.
+Cache-control: tells how long it can cache the response before checking with the server again
+
+
+
+
+
+
+
+
 
 
 

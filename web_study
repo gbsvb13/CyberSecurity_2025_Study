@@ -53,10 +53,21 @@ Set-cookie : sends cookies from the server to the client.
 To keep things secure, cookie must set with the HttpOnly / Secure flag.
 Cache-control: tells how long it can cache the response before checking with the server again
 
+Security Headers
+helps improve the overall security of the web application by providing mitigations(완화)
+Content-Security-Policy (CSP)
+An additional security layer that can help mitigate against common attacks like Cross-Site Scripting(XSS).
+CSP provides a way for administrators to say what domains or sources are considered safe and provides a layer of mitigation to such attacks.
 
+Strict-Transport-Security(HSTS)
+Ensures that web browsers will always connect over HTTPS.
+ex)[Strict-Transport-Security: max-age=63072000; includeSubDomains; preload]
+max-age : expiry time
 
-
-
+X-Content-Type-Options
+Instruct browsers not to guess MIME time of a resource but only use the Content-type header.
+nonsniff : not to sniff or guess MIME type.
+*MIME type: Internet standard that extends the format of email messages to support text in character sets other than ASCII
 
 
 

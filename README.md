@@ -382,23 +382,6 @@ resource monitor : [resmon]
 In cmd, [net] command is primarily used to manage network resources.
 Regestry editor : [regedt32.exe]
 
-20250312
-JS's two type : Internal / External
-Internal : places the code directly within the HTML document
-External : Better for reusing JS across multiple web pages
-How to use JS
-chrome tab -> inspect -> console
-alert : print
-prompt : question
-confirm: yes or no  
-By using above, hacker can cause undesired experience or deceive user.
-Case of the code is minified:
-In the html console(chrome -> inspect -> console)
-https://codebeautify.org/javascript-obfuscator#google_vignette : convert js code to obfuscated code
-
-Minifying and Obfuscate JS code make it harder for atackers to understand the logic of the code.
-
-
 
 
 

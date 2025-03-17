@@ -88,6 +88,13 @@ Minifying and Obfuscate JS code make it harder for atackers to understand the lo
 
 20250314
 Reviewing a last semester's SQL
+In SQL query, CONCAT() function, which combines two or more strings can be used
+ex)[SELECT CONCAT(name, " is a type of ", category, " book.") AS book_info FROM books;]
+
+
+
+
+
 
 
 

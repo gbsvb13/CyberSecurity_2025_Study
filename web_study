@@ -100,8 +100,19 @@ Features
 Proxy : Enables interception of requests / responses while interacting with web applications
 Repeater : caputuring, modifying and resending the same request multiple times
 
+When Proxy successfully activated and worked, website's hang(로딩되지 않음) and attacker can see what user(victim) should see.
 
-
+OWASP TOP 10
+Broken Access Control
+Cryptographic Failures
+Injection
+Insecure Design
+Security Misconfiguration
+Vulnerable and Outdated Components
+Identification and Authentication Failures
+Software and Data Integrity Failures
+Security Logging & Monitoring Failures
+Server-Side Request Forgery (SSRF)
 
 
 

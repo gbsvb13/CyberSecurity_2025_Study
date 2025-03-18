@@ -91,9 +91,14 @@ Reviewing a last semester's SQL
 In SQL query, CONCAT() function, which combines two or more strings can be used
 ex)[SELECT CONCAT(name, " is a type of ", category, " book.") AS book_info FROM books;]
 
+20250318
+Burp Suite
+Burp Suite : Serves(제공하다) comprehensive solution for conducting web application penetration testing  
+Captures and enables manipulation of all the http/s traffic between a browser and web server.
 
-
-
+Features
+Proxy : Enables interception of requests / responses while interacting with web applications
+Repeater : caputuring, modifying and resending the same request multiple times
 
 
 

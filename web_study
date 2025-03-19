@@ -120,3 +120,26 @@ Starts with <!-- and ends with --!> means dev commnet, may find a critical info
 or can find a info of used frameworks; By framework's version and name, Attacker can find vulnerabilities.
 In dev tools, when there's blocked info and ~~blocker is in there, by modifying that code's style display:none, Can see the blocked info.
 
+Content Discovery
+Content : The things that aren't immediately presented to people and that weren't always intended for public access.
+Favicon : small icon displayed in the browser's address bar or tab used for branding a website.
+By Favicon, Attacker can notice what framework is in use.
+In Kali, [curl https://static-labs.tryhackme.cloud/sites/favicon/images/favicon.ico | md5sum]
+then get a hash and [https://wiki.owasp.org/index.php/OWASP_favicon_database.] find same from here so Attacker can notice what framework used
+
+Server can be noticed by http headers. [curl] prints web page's HTML stuffs.
+
+OSINT - Open Source INTelligence
+Some external resources that can help discovering informations
+Google Dorking : Can quickly find desired data by using filter
+site : [site:example.com login] : from example.com, find domain which contains login 
+inurl : [inurl:admin] , searches url which contains admin
+
+Wappalyzer
+Online tool and browser extension that helps identify what technologies a website uses, such as frameworks
+
+Wayback Machine
+historical archive of websites that dates back to the late 90s
+Search a domain name, and it will show attacker all the times the service scraped the web page and saved the contents
+This service can help uncover old pages that may still be active on the current website.
+

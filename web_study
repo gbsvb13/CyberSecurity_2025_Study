@@ -114,5 +114,9 @@ Software and Data Integrity Failures
 Security Logging & Monitoring Failures
 Server-Side Request Forgery (SSRF)
 
-
+20230319
+Web dev tools
+Starts with <!-- and ends with --!> means dev commnet, may find a critical info
+or can find a info of used frameworks; By framework's version and name, Attacker can find vulnerabilities.
+In dev tools, when there's blocked info and ~~blocker is in there, by modifying that code's style display:none, Can see the blocked info.
 

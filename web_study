@@ -143,3 +143,28 @@ historical archive of websites that dates back to the late 90s
 Search a domain name, and it will show attacker all the times the service scraped the web page and saved the contents
 This service can help uncover old pages that may still be active on the current website.
 
+0326
+Cookie tempering
+Cookie can contain plain texts that important message for hackers.
+ex)Set-Cookie: logged_in=true; Max-Age=3600; Path=/
+Set-Cookie: admin=false; Max-Age=3600; Path=/
+In this cookie, attacker can manipulate cookies; ex)curl -H "Cookie: logged_in=true; admin=false" http://10.10.106.21/cookie-test
+Answer : logged as a User / if admin=true, attacker can logged in as an admin.
+
+Hashing : cookie values usually become long strings with random characters. and they called hash. but hashes can be easilly manipulated by
+[Crackstation.net], the database of billions of hashes and their original strings.
+
+Encoding
+It's similar with Hashing in that it creates what would seem a random string of text.
+But in fact, the encoding is reversible.
+Rerverse the endcoded codes : [https://www.base64decode.org/] *Only if base64.
+
+IDOR
+Insecure Direct Object Reference
+Occurs when a web server receives user-supplied input to retrieve objects, too much trust has been placed on the input data.
+ex) online_service.thm/profile?user_id=1234 , changing user_id=1000 and view another user's info. 
+this vulnerability is IDOR.
+Not by manipulating a URL, manipulating a query can be IDOR hacking. 
+After login, user can post user-id info to server. in dev tool's network tab, it can be detected.
+So by manipulating the user-id to another number attacker can see another user's info. (firefox recommended)
+

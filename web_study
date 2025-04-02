@@ -168,3 +168,11 @@ Not by manipulating a URL, manipulating a query can be IDOR hacking.
 After login, user can post user-id info to server. in dev tool's network tab, it can be detected.
 So by manipulating the user-id to another number attacker can see another user's info. (firefox recommended)
 
+0402
+Path Traversal
+It occurs when the user's input is passed to a function such as file_get_contents in PHP.
+URL parameter by adding payloads to see how the web application behaves
+Called dot-dot-slash attack - taking adventage of moving the directory using the dots [../]. 
+ex)http://webapp.thm/get.php?file=../../../../etc/passwd
+by this, attacker can approach passwd folder.
+

@@ -169,6 +169,7 @@ After login, user can post user-id info to server. in dev tool's network tab, it
 So by manipulating the user-id to another number attacker can see another user's info. (firefox recommended)
 
 0402
+LFI : Local File Inclusion
 Path Traversal
 It occurs when the user's input is passed to a function such as file_get_contents in PHP.
 URL parameter by adding payloads to see how the web application behaves
@@ -178,5 +179,10 @@ by this, attacker can approach passwd folder.
 0403
 The number of ../ is determined by target file's address.
 if trying to access /var/www/html/THM-4/index.php, ../../../../etc/passwd is correct access method.
+by attaching one or two %00(null payload) after route, attacker can avoid php's secure test(before ver 7)
+RFI
+Remote File Inclusion
+**please do again and get some RFI practice**
+
 
 

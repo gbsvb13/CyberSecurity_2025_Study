@@ -175,4 +175,8 @@ URL parameter by adding payloads to see how the web application behaves
 Called dot-dot-slash attack - taking adventage of moving the directory using the dots [../]. 
 ex)http://webapp.thm/get.php?file=../../../../etc/passwd
 by this, attacker can approach passwd folder.
+0403
+The number of ../ is determined by target file's address.
+if trying to access /var/www/html/THM-4/index.php, ../../../../etc/passwd is correct access method.
+
 

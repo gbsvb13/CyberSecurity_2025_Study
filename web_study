@@ -184,5 +184,20 @@ RFI
 Remote File Inclusion
 **please do again and get some RFI practice**
 
+0507
+SSRF : Server-Side Request Forgery
+-> A vulnerability that allows a malicious user to cause the webserver to make an additional or edited HTTP request to the resource of the attacker's choosing.
+Can send an additional HTTP request made by attacker.
 
+SSRF Attack
+1. If 'url=~~' in URL : Just change URL after url= to desired URL
+2. In URL, first domain name and server= ~~~, (ex. website.thm/stock?server=api.website.thm/url/user&x=)then URL actually become 'api.website.thm/url/user'.
+When this occurs, a payload ending in *&x=* is used to stop the remaining path from being appended to URL. so hacker can access to desired URL.
 
+Vulnerable to SSRF attack URLs : 
+full URL used in a parameter ex)server=http://server.website.thm/store
+hidden field in a form(by opening devTool) 
+partial URL such as just the hostname ex)http://website.thm/form?server=api
+only the path of the URL https://website.thm/form?dst=/forms/contact
+for exapmle, Use FireFox web devTool and check the private information, change some request's value to 'x/../private' so it can bypass other urls but can access
+to the private. then user's private account may change and inspect them by right click, an encoded version of private information may be gotten.

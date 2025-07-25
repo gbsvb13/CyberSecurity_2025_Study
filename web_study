@@ -201,3 +201,13 @@ partial URL such as just the hostname ex)http://website.thm/form?server=api
 only the path of the URL https://website.thm/form?dst=/forms/contact
 for exapmle, Use FireFox web devTool and check the private information, change some request's value to 'x/../private' so it can bypass other urls but can access
 to the private. then user's private account may change and inspect them by right click, an encoded version of private information may be gotten.
+
+0725
+Race condition itself can become an effective attacking method.
+Like a real race condition(in OS), by sending many requests at once, attacker may attack a program / web server.
+
+Command Injection
+Means an vulnerability that attacker can manipulate input fields to inject malicious commands into a vulnerable application.
+For example, achieving command injection on a web server running as a user named joe will execute commands under this joe- 
+and therefore obtain any permissions that joe has.
+Also known as RCE - Remote Code Execution

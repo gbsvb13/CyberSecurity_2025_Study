@@ -211,3 +211,34 @@ Means an vulnerability that attacker can manipulate input fields to inject malic
 For example, achieving command injection on a web server running as a user named joe will execute commands under this joe- 
 and therefore obtain any permissions that joe has.
 Also known as RCE - Remote Code Execution
+
+0901
+burp suit : intruder
+Intruder is Burp Suite's built-in fuzzing tool that allows for automated request modification and repetitive testing with variations in input values.
+Intruder's functionality is comparable to command-line tools like Wfuzz or ffuf.
+
+Four sub-tabs in Intruder
+Positions : allows user to select an attack type and configure where user want to insert payloads in the request.
+Payloads : Here user can select values to insert into the positions defined in the Positions tab.
+Resource Pool : allows resource allocation, can used in burpsuit buisness edition.
+Settings
+
+Burp Suite automatically attempts to identify the most probable positions where payloads can be inserted. 
+These positions are highlighted in green and enclosed by section marks(§)
+
+Burp suite's Attack types
+Sniper / Battering Ram / Pitchfork / Cluster Bomb
+
+Sniper : Default, Most commonly used. cycles through the payloads, inserting one payload at a time, each position.
+For precise and focused testing.
+Battering Ram : sends all payloads simultaneously. useful when testing race codition.
+PitchFork : Enables the simultaneous testing of multiple positions with different payloads.
+Cluster bomb: The Cluster bomb attack type combines the Sniper and Pitchfork approaches. 
+It performs a Sniper-like attack on each position but simultaneously tests all payloads from each set.
+
+Sniper : Intruder takes each payload from the payload set and substitutes it into each defined position in turn.
+Battering Ram: the same payload is thrown at every defined position simultaneously, providing a brute-force-like approach to testing.
+
+In intruding, when trying to do sniper/ pitchFork attack or etc, need to get a request of POST.
+*위의 것들을 할 때에는 로그인 시도의 프록시를 가져와서 할 것
+
